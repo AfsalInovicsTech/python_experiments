@@ -12,8 +12,8 @@ def loop_using_index():
         a = item + "test"
 
 
-def using_enumerate():
-    for index, item in enumerate(data):
+def using_pythonic_for_loop():
+    for item in data:
         #print(item, end="\r")
         a = item + "test"
 
@@ -23,8 +23,8 @@ def using_enumerate():
 time_taken = timeit.timeit(loop_using_index, number=1000_000)
 print("Time taken by loop with index", time_taken)
 
-time_taken = timeit.timeit(using_enumerate, number=1000_000)
-print("Time taken by enumerate", time_taken)
+time_taken = timeit.timeit(using_pythonic_for_loop, number=1000_000)
+print("Time taken by pythonic for loop ", time_taken)
 
 
 import dis
@@ -33,4 +33,4 @@ dis.dis(loop_using_index)
 
 
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.")
-dis.dis(using_enumerate)
+dis.dis(using_pythonic_for_loop)
