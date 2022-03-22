@@ -7,7 +7,7 @@ import timeit
 
 
 def looping_using_key():
-    data = {str(i): i for i in range(20)}
+    data = {str(i): i for i in range(2000)}
     for key in data:
         #print(data[key])
         a = data[key]
@@ -15,12 +15,12 @@ def looping_using_key():
 
 
 def looping_using_items():
-    data = {str(i): i for i in range(20)}
+    data = {str(i): i for i in range(2000)}
     for key, value in data.items():
         a = value
 
 def looping_using_values():
-    data = {str(i): i for i in range(20)}
+    data = {str(i): i for i in range(2000)}
     for value in data.values():
         a = value
 
