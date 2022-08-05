@@ -1,0 +1,36 @@
+import random
+
+
+def long_condition_check():
+    number = random.randint(1, 10)
+    if (number == 2 or number == 4 or number == 6 or number == 8 or number == 10):
+        return True
+    return False
+
+
+def using_in_operator():
+    number = random.randint(1, 10)
+    return number in [2, 4, 6, 8, 10]
+    #return True
+    #return False
+
+
+def using_in_tuple():
+    number = random.randint(1, 10)
+    return number in (2, 4, 6, 8, 10)
+
+
+import timeit
+
+time_taken = timeit.timeit(using_in_tuple, number=1000_000)
+print("Time taken for long if: ", time_taken)
+
+time_taken = timeit.timeit(using_in_operator, number=1000_000)
+print("Time taken for in operator: ", time_taken)
+
+
+import dis
+
+dis.dis(long_condition_check)
+
+dis.dis(using_in_operator)
