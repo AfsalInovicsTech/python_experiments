@@ -1,1 +1,6 @@
 __pycache__
+remove_bg/venv*
+*.jpg
+*.svg
+*.png
+*.jpeg
