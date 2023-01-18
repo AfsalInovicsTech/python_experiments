@@ -4,3 +4,6 @@ remove_bg/venv*
 *.svg
 *.png
 *.jpeg
+*.mp4
+*.mp3
+*.3gpp
